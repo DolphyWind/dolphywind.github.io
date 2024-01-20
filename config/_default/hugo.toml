@@ -1,0 +1,47 @@
+baseURL = 'https://example.org/'
+languageCode = 'en-us'
+theme = 'hello_friend'
+paginate     = 10
+
+[taxonomies]
+  tag      = "tags"
+  category = "categories"
+
+[languages]
+  [languages.en]
+    title = "Dolphy's Blog"
+    copyright = '© 2024-2024 by Yunus Emre Aydın'
+    writtenBy = "Written by"
+    readMore = "Read more"
+    readOtherPosts = "Read other posts"
+    newerPosts = "Newer posts"
+    olderPosts = "Older posts"
+    minuteReadingTime = "min read"
+    dateFormatSingle = "02-01-2006"
+    dateFormatList = "02-01-2006"
+
+    [languages.en.params.logo]
+      logoText = "DolphyWind"
+      logoHomeLink = "/"
+    # or
+    #
+    # path = "/img/your-example-logo.svg"
+    # alt = "Your example logo alt text"
+
+  # And you can even create generic menu
+  [[menu.main]]
+    identifier = "posts"
+    name       = "Posts"
+    url        = "/posts"
+  [[menu.main]]
+    identifier = "projects"
+    name       = "Projects"
+    url        = "/"
+  [[menu.main]]
+    identifier = "anarchcorner"
+    name       = "Anarchy Corner"
+    url        = "/"
+  [[menu.main]]
+    identifier = "about"
+    name       = "About"
+    url        = "/"

@@ -1,0 +1,26 @@
+dateform        = "Jan 2, 2006"
+dateformShort   = "Jan 2"
+dateformNum     = "02-01-2006"
+dateformNumTime = "02-01-2006 15:04"
+
+# Subtitle for home
+# homeSubtitle = "A simple and beautiful blog"
+
+# Set disableReadOtherPosts to true in order to hide the links to other posts.
+disableReadOtherPosts = false
+
+# Enable sharing buttons, if you like
+enableSharingButtons = true
+
+# Show a global language switcher in the navigation bar
+enableGlobalLanguageMenu = false
+
+# Metadata mostly used in document's head
+description = "My new homepage or blog"
+keywords = "homepage, blog"
+images = [""]
+
+[contact]
+email = 'yunusaydin590@gmail.com'
+
+
