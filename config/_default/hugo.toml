@@ -37,12 +37,16 @@ paginate     = 10
   [[menu.main]]
     identifier = "projects"
     name       = "Projects"
-    url        = "/"
+    url        = "/projects"
   [[menu.main]]
-    identifier = "anarchcorner"
+    identifier = "anarchycorner"
     name       = "AnarchyCorner"
-    url        = "/"
+    url        = "/anarchycorner"
   [[menu.main]]
     identifier = "about"
     name       = "About"
     url        = "/about"
+  [[menu.main]]
+    identifier = "oneninetysix"
+    name       = "196"
+    url        = "/196"
