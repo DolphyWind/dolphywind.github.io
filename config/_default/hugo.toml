@@ -35,10 +35,6 @@ paginate     = 10
     name       = "Posts"
     url        = "/posts"
   [[menu.main]]
-    identifier = "projects"
-    name       = "Projects"
-    url        = "/projects"
-  [[menu.main]]
     identifier = "anarchycorner"
     name       = "AnarchyCorner"
     url        = "/anarchycorner"

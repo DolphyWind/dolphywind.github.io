@@ -22,11 +22,12 @@ Hello! My name is Yunus Emre Aydın. I am a CS student in Istanbul University-Ce
 + Abstract Algebra
 + Probability Theory and Statistics
 + Robotics
-+ Ontology
++ Metaphysics
++ Philosophy of Religion
 
 ### Languages, Tools & Frameworks
 The languages, tools and frameworks I am using or have used in the past
-+ C++, C, CMake
++ C++, C, CMake, GDB
 + SFML
 + C#, Unity
 + Java
