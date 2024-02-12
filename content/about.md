@@ -4,30 +4,41 @@ title: 'About Me'
 draft: false
 ---
 
-Hello! My name is Yunus Emre Aydın. I am a CS student in Istanbul University-Cerrahpaşa. (More text here) 
+Hello! My name is Yunus Emre Aydın. I am a CS student in Istanbul University-Cerrahpaşa. My interest towards computers started to develop during my childhood years.
+I\'ve got accepted to Besiktas Science and Art Center which is a public school for gifted students. My programming journey started there.
+Since then, my interest towards computers grow, and I've decided to become a Computer Scientist. I also self-study math on my free time.  
 
 ### Interests
-+ Game Development
-+ Computer Graphics
-+ Game Engine Development
-+ Image Processing
-+ Computer Vision
-+ Interpreter Construction
-+ Esoteric Programming Languages
-+ Abstract Data Structures
-+ Theoretical Computer Science
-+ Calculus
-+ Linear Algebra
-+ Number Theory
-+ Abstract Algebra
-+ Probability Theory and Statistics
-+ Robotics
-+ Metaphysics
-+ Philosophy of Religion
+Here are my interests. (Ordering is random)
+
+* **Computer Science**
+  + Game Development
+  + Computer Graphics
+  + Game Engine Development
+  + Image Processing
+  + Computer Vision
+  + Interpreter Construction
+  + Esoteric Programming Languages
+  + Abstract Data Structures
+  + Theoretical Computer Science  
+
+* **Mathematics**
+  + Calculus
+  + Linear Algebra
+  + Number Theory
+  + Abstract Algebra
+  + Probability Theory and Statistics
+  + Real Analysis
+  + Complex Analysis  
+  
+* **Philosophy**
+  + Metaphysics
+  + Philosophy of Religion
 
 ### Languages, Tools & Frameworks
 The languages, tools and frameworks I am using or have used in the past
 + C++, C, CMake, GDB
++ Python, OpenCV, Sympy
 + SFML
 + C#, Unity
 + Java
@@ -75,3 +86,11 @@ I am using a dual-boot system. I daily drive Linux and only boot Windows for gam
 + [VertiaXD/Deprem-Discord-Botu](https://github.com/VertiaXD/Deprem-Discord-Botu): A discord bot that reports the earthquakes in Turkey [PR1](https://github.com/VertiaXD/Deprem-Discord-Botu/pull/2) [PR2](https://github.com/VertiaXD/Deprem-Discord-Botu/pull/3)
 + [archlinux/archinstall](https://github.com/archlinux/archinstall): Arch Linux installer [PR](https://github.com/archlinux/archinstall/pull/1676)
 + [mpereira/tty-solitaire](https://github.com/mpereira/tty-solitaire): A solitaire game on terminal [PR](https://github.com/mpereira/tty-solitaire/pull/67) [My modifications](https://github.com/DolphyWind/tty-solitaire)
+
+### Other Places I am at
++ Mail: [yunusaydin590@gmail.com](mailto:yunusaydin590@gmail.com)
++ [GitHub](https://www.github.com/DolphyWind)
++ [Itch.io](https://dolphywind.itch.io)
++ [Steam](https://steamcommunity.com/id/DolphyWind/)
++ Discord: dolphywind
++ [Reddit](https://www.reddit.com/user/YunusEmre0037)
