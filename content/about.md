@@ -4,12 +4,14 @@ title: 'About Me'
 draft: false
 ---
 
-Hello! My name is Yunus Emre Aydın. I am a CS student in Istanbul University-Cerrahpaşa. My interest towards computers started to develop during my childhood years.
-I\'ve got accepted to Besiktas Science and Art Center which is a public school for gifted students. My programming journey started there.
-Since then, my interest towards computers grow, and I've decided to become a Computer Scientist. I also self-study math on my free time.  
+Hello! My name is Yunus Emre Aydın. I am a Computer Science student in Istanbul University-Cerrahpaşa.
+My interest towards computers started to develop during my childhood years. My programming journey began when
+I got accepted to Besiktas Science and Art Center which is a public school for gifted students. Since then, I've written
+countless lines of code and continue to write more. I am more focused on computer graphics at the moment, but I'd like to
+delve into other areas in the future as well.
 
 ### Interests
-Here are my interests. (Ordering is random)
+Here are my interests. (Ordering is completely random)
 
 * **Computer Science**
   + Game Development
@@ -34,6 +36,9 @@ Here are my interests. (Ordering is random)
 * **Philosophy**
   + Metaphysics
   + Philosophy of Religion
+
+* **Other**
+  + Evolutionary Biology
 
 ### Languages, Tools & Frameworks
 The languages, tools and frameworks I am using or have used in the past

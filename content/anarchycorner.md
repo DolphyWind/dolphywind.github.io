@@ -3,6 +3,14 @@
 draft: false
 ---
 
+**I will post random things here, and I am not planning to remove them unless I have to.**
+
+---
+
+I just wasted an hour debugging a program. Said program had no bugs, it was me running an old binary over and over again...
+
+---
+
 #### Reasons to like rust
 1. Speed
 2. Memory safety
@@ -17,6 +25,3 @@ draft: false
 4. Rust community
 5. Rust community
 
----
-
-I will post random things here, and I am not planning to remove them unless I have to.
