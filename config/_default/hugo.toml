@@ -1,4 +1,4 @@
-baseURL = 'https://example.org/'
+baseURL = 'https://dolphywind.github.io/'
 languageCode = 'en-us'
 theme = 'hello_friend'
 paginate     = 10
