@@ -7,6 +7,10 @@ draft: false
 
 ---
 
+Documenting stuff is tiring.
+
+---
+
 I just wasted an hour debugging a program. Said program had no bugs, it was me running an old binary over and over again...
 
 ---
