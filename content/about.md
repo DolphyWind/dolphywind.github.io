@@ -36,19 +36,23 @@ Here are my interests. (Ordering is completely random)
 * **Philosophy**
   + Metaphysics
   + Philosophy of Religion
+  + Theology
 
 * **Other**
   + Evolutionary Biology
+  + Classical Mechanics
 
 ### Languages, Tools & Frameworks
 The languages, tools and frameworks I am using or have used in the past
 + C++, C, CMake, GDB
 + Python, OpenCV, Sympy
-+ SFML
++ SFML, GLFW
 + C#, Unity
 + Java
 + HTML/CSS/JS
 + Lua
++ Docker
++ LaTeX
 
 ### IDEs & Text Editors
 + C/C++: CLion, NeoVim
@@ -56,7 +60,7 @@ The languages, tools and frameworks I am using or have used in the past
 + Markdown: Obsidian.md, VSCodium, NeoVim
 + LaTeX: Obsidian.md
 + C#: Rider
-+ Java: Intellij IDEA
++ Java: Intellij IDEA, NeoVim
 + Anything else: NeoVim
 
 ### Operating System & Desktop Environment
@@ -99,3 +103,33 @@ I am using a dual-boot system. I daily drive Linux and only boot Windows for gam
 + [Steam](https://steamcommunity.com/id/DolphyWind/)
 + Discord: dolphywind
 + [Reddit](https://www.reddit.com/user/YunusEmre0037)
+
+### Buttons
+{{< gallery
+  "/no-web3.gif"
+  "/latex.gif"
+  "/github-check.gif"
+  "/bitwarden.gif"
+  "/linux_powered.gif"
+  "/anythingbutchrome.gif"
+  "/getfirefox.gif"
+  "/freespeech_forever.gif"
+  "/hatemac.jpg"
+  "/nocookie.gif"
+  "/neovim.gif"
+  "/archbtw.png"
+  "/hatems.jpg"
+  "/lynx_compatible.gif"
+  "/lgbtqia.gif"
+  "/linux_now.gif"
+  "/nobelief.gif"
+  "/lol.gif"
+  "/privacynow.jpg"
+  "/nft.gif"
+  "/cpp.gif"
+  "/jobsritchie.gif"
+  "/gplv3.gif"
+  "/web3sucks.gif"
+  "/opengl.gif"
+  "/firefoxnow.gif"
+>}}
