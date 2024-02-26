@@ -53,6 +53,7 @@ The languages, tools and frameworks I am using or have used in the past
 + Lua
 + Docker
 + LaTeX
++ ArduPilot, Gazebo, MAVProxy
 
 ### IDEs & Text Editors
 + C/C++: CLion, NeoVim
@@ -126,6 +127,7 @@ I am using a dual-boot system. I daily drive Linux and only boot Windows for gam
   "/lol.gif"
   "/privacynow.jpg"
   "/nft.gif"
+  "/bi.png"
   "/cpp.gif"
   "/jobsritchie.gif"
   "/gplv3.gif"
