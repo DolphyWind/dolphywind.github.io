@@ -16,7 +16,7 @@ A couple of nights ago, in the Esolangs Discord server, a user named kepe was
 trying to solve last years' Canadian Computing Competition (CCC for short) problems.
 He couldn't solve some of them, and most importantly he didn't know graphs well and the
 next CCC was the next day. So a thread made to help him. He was pretty stressed, but that's
-not the main focus here. **TODO: Add stuff here** Then a "troll" joined the thread (She didn't want me to use her name.
+not the main focus here. After some time, a "troll" joined the thread (She didn't want me to use her name.
 She was probably not serious, but that's how I'll refer to her from now on) The first question
 of CCC 2022 quickly grab her attention, because she had already solved a variant of it before.
 
@@ -150,16 +150,6 @@ With that out of the way, we can begin. Let's add an entirely different person i
 change. Let's call them \\(p \text{ and } q\\). Jane is also not great at math, she wants us to find the number of ways to form any given number as a sum of her
 favorite numbers \\(p \text{ and } q\\).
 
-**MIGHT GET REMOVED**
-Let's first show that if \\(g=\(a, b\)\\) for some \\(a \text{ and } b\\), then \\(g\\) is the least positive integer value of \\(ax+by\\) where \\(x \text{ and } y\\) range over all integers.
-It might seem random at first, but it will come in handy in the future. Let's say that \\(l\\) is the least positive value that can be formed and let \\(l=ax_{0}+by_{0}\\).
-We'll show that it divides both \\(a \text{ and } b\\). Consider the case \\(l \not \mid a\\). This means there exist \\(q > 0 \text{ and } 0 < r < l\\) such that \\(a = ql+r\\).
-This means \\(r = a - ql = a - q(ax_{0} + by_{0}) = a(1-qx_{0}) + b(-qy_{0})\\), indicating that \\(r\\) can be formed using \\(a \text{ and } b\\). But since \\(r < l\\),
-this contradicts our claim and proves that \\(l \mid a\\). The \\(l \mid b\\) case can be proven similarly, so I'll skip that. Now since \\(g = (a, b)\\), we can write
-\\(a=g\alpha, b=g\beta\\) and \\(l=ax_{0}+by_{0}=g(\alpha x_{0} + \beta y_{0})\\). Thus \\(g \mid l\\) and we conclude that \\(g \leq l\\), but \\(g < l\\) is impossible
-because \\(g\\) is the greatest common denominator, so this leaves us with \\(g=l\\) and proves our first claim.
-**MIGHT GET REMOVED**
-
 Now let's prove to her if \\g = ((p, q)\\), then we can only form numbers that are divisible by \\(g\\), and also show that if a number \\(r\\) is divisible by \\(g\\). The
 question of forming it using \\(p\\) and \\(q\\) is equivalent to forming \\(\frac{r}{g}\\) with \\(\frac{p}{g}\\) and \\(\frac{q}{g}\\). First claim is trivially easy to prove,
 let a formulation \\(r\\) to be \\(px + qy\\) where \\(x \text{ and } y\\) are integers, since \\(g \mid p\\) and \\(g \mid q\\), the formulation itself is also divisible by \\(g\\).
@@ -187,6 +177,7 @@ constexpr EuclideanAlgorithmResult euclidean(int p, int q)
 {
     EuclideanAlgorithmResult result;
     int max = std::max(p, q);
+    int max_copy = max;
     int min = p + q - max;
 
     int f_0 = 1, f_1 = 0, f_2 = max;
@@ -205,10 +196,81 @@ constexpr EuclideanAlgorithmResult euclidean(int p, int q)
     }
 
     result.gcd = min;
-    result.x = s_0;
-    result.y = s_1;
+    result.x = (max_copy == p ? s_0 : s_1);
+    result.y = s_0 + s_1 - result.x;
 
     return result;
 }
 ```
 
+Now, let's focus on the actual question, let the Jane's smallest favorite number to be \\(p\\), other one to be \\(q\\) and our target number to be \\(r\\).
+By intuition, we can see that we can replace \\(\frac{\[p, q\]}{p}\\) amount of \\(p\\)'s with \\(\frac{\[p, q\]}{q}\\) amount of \\(q\\)'s. We've shown earlier
+that solving this problem for \\(p, q, r\\), where \\(\(p, q\) \neq 1\\) is equivalent to solving it for \\(\frac{p}{\(p, q\)}, \frac{q}{\(p, q\)}, \frac{r}{\(p, q\)}\\).
+So we can safely assume that \\(\(p, q\)=1\\). This also makes our past claim a bit clearer since \\(\[p, q\] = pq\\) if \\(\(p, q\)=1\\). Let me rephrase it to make things clear,
+"We can replace \\(q\\) amount of \\(p\\)'s with \\(p\\) amount of \\(q\\)'s". So our goal should be to find the amount of \\(p\\)'s used in the formulation that has
+the most amount of \\(p\\)'s. Then similarly, we'll divide this value by \\(q\\) and add one to get the total amount of formulations. Let's start writing our code:
+```cpp
+constexpr int jane(int n, int p, int q)
+{
+    if(q < p)
+    {
+        std::swap(p, q);
+    }
+
+    EuclideanAlgorithmResult result = euclidean(p, q);
+    if(n % result.gcd != 0)
+    {
+        return 0;
+    }
+    n /= result.gcd;
+    p /= result.gcd;
+    q /= result.gcd;
+    
+    auto[np, d] = divmod(n, p);
+    np -= /*???*/;
+    if(np < 0)
+    {
+        return 0;
+    }
+    return np / q + 1;
+}
+```
+
+Oops, we immediately came across another problem. What should we subtract from `np`? If you recall, for the \\(p=4\\) and \\(q=5\\) case that number turned out to be
+equal to `d` itself. But we are not that lucky here so let's think about it more. Let's say that removing \\(t\\) amount of \\(p\\)'s gets us a number that is divisible
+by \\(q\\). So the congruence \\(pt+d \equiv 0 \pmod{q}\\) has to be satisfied. If we subtract \\(d\\) from both sides, we get this congruence: \\(pt \equiv -d \pmod{q}\\).
+Now I want you to imagine a number \\(\bar{p}\\) such that \\(p\bar{p} \equiv 1 \pmod{q}\\). If we multiply both sides of the congruence by \\(\bar{p}\\) we can find \\(t\\)
+in terms of \\(d\\) and \\(\bar{p}\\): \\(t \equiv -d\bar{p} \pmod{q}\\). But what is the value of \\(\bar{p}\\)? And most importantly, does such a number exist? Let's investigate.
+\\(p\bar{p} \equiv 1 \pmod{q}\\) implies that there exist an integer \\(z\\) such that, \\(p\bar{p} + qz = 1\\). But wait, since 1 is the GCD of \\(p\\) and \\(q\\), the Euclidean
+algorithm has already given us the value of \\(\bar{p}\\) and \\(z\\) as \\(x\\) and \\(y\\), respectively. So we found the value of \\(t\\) as \\(t=-dx \mod{q}\\). To avoid C++'s
+negative modulus results, I'll also add the product \\(pq\\) before performing the modulus operation. Since it contains \\(q\\) as a product, it won't change the result.
+
+```cpp
+constexpr int jane(int n, int p, int q)
+{
+    if(q < p)
+    {
+        std::swap(p, q);
+    }
+
+    EuclideanAlgorithmResult result = euclidean(p, q);
+    if(n % result.gcd != 0)
+    {
+        return 0;
+    }
+    n /= result.gcd;
+    p /= result.gcd;
+    q /= result.gcd;
+    
+    auto[np, d] = divmod(n, p);
+    np -= (p * q - d * result.x) % q;
+    if(np < 0)
+    {
+        return 0;
+    }
+    return np / q + 1;
+}
+```
+
+### Second Generalization: Multiple Favorite Numbers
+TBC
