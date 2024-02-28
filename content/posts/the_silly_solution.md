@@ -14,11 +14,12 @@ cover: "/silly.png"
 
 A couple of nights ago, in the Esolangs Discord server, a user named kepe was
 trying to solve last years' Canadian Computing Competition (CCC for short) problems.
-He couldn't solve some of them and most importantly he didn't know graphs well and the
+He couldn't solve some of them, and most importantly he didn't know graphs well and the
 next CCC was the next day. So a thread made to help him. He was pretty stressed, but that's
-not the main focus here. Then a "troll" joined the thread (She didn't want me to use her name.
+not the main focus here. **TODO: Add stuff here** Then a "troll" joined the thread (She didn't want me to use her name.
 She was probably not serious, but that's how I'll refer to her from now on) The first question
-of CCC 2022 quickly grab her attention, because she had already solved it before somewhere else.
+of CCC 2022 quickly grab her attention, because she had already solved a variant of it before.
+
 Here's the question itself;
 > Finn loves Fours and Fives. In fact, he loves them so much that he wants to know the number
 of ways a number can be formed by using a sum of fours and fives, where the order of the
@@ -95,15 +96,16 @@ int number_of_solutions(int n)
     return n5 / 4 + 1;
 }
 ```
-But I couldn't check whether the above code was correct or not because in the first version of her code
+But I couldn't check whether the above code was correct or not because the first version of her code
 had some bugs. And I missed one of them, so the results produced were unreliable. So about 30 mins later
 I posted an obfuscated version of the code to the server. And the troll informed me that the for `n=16`
 the C version of the code returned 2 and the python version of the code returned 1. She then later explained
 that it was caused by the modulus operator behavior in C. It turns out that C standard allows some modulus
 operations to yield negative results. So replacing `(-d)%4` with `(4-d)%4` fixed most of the issues. However,
 the code still produced wrong results for some values. But it was easy to fix, I just needed to check whether
-`n5` was less than zero or not and return zero if it was. With those little changes, the first fully functioning
-version of the silly was ready. (Oh and I also rewrote it, it now finds the number of fours in the solution with the most amount of fours):
+`n5` was less than zero or not, and return zero if it was. With those little changes, the first fully functioning
+version of the "silly" was ready. (Oh and I also rewrote it, it now finds the number of fours in the solution with
+the most amount of fours):
 
 ```c
 int silly(int n)
@@ -116,7 +118,7 @@ int silly(int n)
 }
 ```
 
-And here's a stripped one version:
+And here's a stripped down version:
 ```c
 int silly2(int n)
 {
@@ -135,8 +137,78 @@ in order for the difference to be divisible by 5:
 + And similarly for `d=3`, I have to remove 3 fours.
 
 Oh wow, what a coincidence! The number of fours I have to remove is exactly equals to `d`! The algorithm then returns 0 if
-the number of fours end up being negative and returns `n4/5 + 1` otherwise. But I haven't stopped there, I wanted to generalize it as much as possible.
+the number of fours end up being negative, and returns `n4/5 + 1` otherwise. But I haven't stopped there, I wanted to generalize it as much as possible.
 Wear your seatbelts people, we are going to the number theory realm!
 
 ### First Generalization: Why Not Any Two Favorite Numbers?
-TBC
+Before we begin, I'd like to explain the notation that I'll be using in the following text. The greatest common denominator of two numbers \\(a \text{ and } b\\),
+will be represented with \\(\(a, b\)\\). Similarly, the least common multiple of two numbers \\(a \text{ and } b\\) will be represented with \\(\[a, b\]\\).
+\\(a \mid b\\) means \\(a\\) divides \\(b\\) meaning there exists an integer \\(x\\) such that \\(b=ax\\). Similarly, \\(a \not \mid b\\) means \\(a\\) does not
+divide \\(b\\).
+
+With that out of the way, we can begin. Let's add an entirely different person into the question: Jane. Jane is an unusual girl, her favorite two numbers always
+change. Let's call them \\(p \text{ and } q\\). Jane is also not great at math, she wants us to find the number of ways to form any given number as a sum of her
+favorite numbers \\(p \text{ and } q\\).
+
+**MIGHT GET REMOVED**
+Let's first show that if \\(g=\(a, b\)\\) for some \\(a \text{ and } b\\), then \\(g\\) is the least positive integer value of \\(ax+by\\) where \\(x \text{ and } y\\) range over all integers.
+It might seem random at first, but it will come in handy in the future. Let's say that \\(l\\) is the least positive value that can be formed and let \\(l=ax_{0}+by_{0}\\).
+We'll show that it divides both \\(a \text{ and } b\\). Consider the case \\(l \not \mid a\\). This means there exist \\(q > 0 \text{ and } 0 < r < l\\) such that \\(a = ql+r\\).
+This means \\(r = a - ql = a - q(ax_{0} + by_{0}) = a(1-qx_{0}) + b(-qy_{0})\\), indicating that \\(r\\) can be formed using \\(a \text{ and } b\\). But since \\(r < l\\),
+this contradicts our claim and proves that \\(l \mid a\\). The \\(l \mid b\\) case can be proven similarly, so I'll skip that. Now since \\(g = (a, b)\\), we can write
+\\(a=g\alpha, b=g\beta\\) and \\(l=ax_{0}+by_{0}=g(\alpha x_{0} + \beta y_{0})\\). Thus \\(g \mid l\\) and we conclude that \\(g \leq l\\), but \\(g < l\\) is impossible
+because \\(g\\) is the greatest common denominator, so this leaves us with \\(g=l\\) and proves our first claim.
+**MIGHT GET REMOVED**
+
+Now let's prove to her if \\g = ((p, q)\\), then we can only form numbers that are divisible by \\(g\\), and also show that if a number \\(r\\) is divisible by \\(g\\). The
+question of forming it using \\(p\\) and \\(q\\) is equivalent to forming \\(\frac{r}{g}\\) with \\(\frac{p}{g}\\) and \\(\frac{q}{g}\\). First claim is trivially easy to prove,
+let a formulation \\(r\\) to be \\(px + qy\\) where \\(x \text{ and } y\\) are integers, since \\(g \mid p\\) and \\(g \mid q\\), the formulation itself is also divisible by \\(g\\).
+And if we let \\(p = g\alpha\\) and \\(q = g\beta\\) where \\(\(\alpha, \beta\)=1\\). This gives us \\(r = px + qy = g(\alpha x + \beta y)\\) and \\(\frac{r}{g}=\alpha x + \beta y
+= \frac{p}{g}x+\frac{q}{g}y\\). And proves our second claim.
+
+We can calculate the GCD of two numbers using the [Euclidean Algorithm](https://en.wikipedia.org/wiki/Euclidean_algorithm), but whilst calculating the GCD, I also want to calculate
+the \\(x \text{ and } y\\) that forms \\(g\\), as they will come in handy in the future. I won't delve into how algorithm works and why it works here, because it'd occupy a lot of space.
+Instead, I'll leave it as an exercise to you, the reader. Here's a C++ code that performs the Euclidean Algorithm:
+```cpp
+struct EuclideanAlgorithmResult
+{
+    int gcd = 0;
+    int x = 0;
+    int y = 0;
+};
+
+constexpr std::pair<int, int> divmod(int a, int b)
+{
+    int d = a / b;
+    return {d, a - d*b};
+}
+
+constexpr EuclideanAlgorithmResult euclidean(int p, int q)
+{
+    EuclideanAlgorithmResult result;
+    int max = std::max(p, q);
+    int min = p + q - max;
+
+    int f_0 = 1, f_1 = 0, f_2 = max;
+    int s_0 = 0, s_1 = 1, s_2 = min;
+
+    while(true)
+    {
+        auto[q, m] = divmod(max, min);
+        if(m == 0) break;
+
+        f_0 = std::exchange(s_0, f_0 - q * s_0);
+        f_1 = std::exchange(s_1, f_1 - q * s_1);
+        f_2 = std::exchange(s_2, f_2 - q * s_2);
+        max = min;
+        min = m;
+    }
+
+    result.gcd = min;
+    result.x = s_0;
+    result.y = s_1;
+
+    return result;
+}
+```
+
