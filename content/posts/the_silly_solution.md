@@ -1,7 +1,7 @@
 ---
 title: 'The "Silly" Solution'
 date: 2024-02-26T10:14:02+03:00
-draft: true
+draft: false
 toc: false
 images:
 tags:
@@ -15,10 +15,10 @@ cover: "/silly.png"
 A couple of nights ago, in the Esolangs Discord server, a user named kepe was
 trying to solve last years' Canadian Computing Competition (CCC for short) problems.
 He couldn't solve some of them, and most importantly he didn't know graphs well and the
-next CCC was the next day. So a thread made to help him. He was pretty stressed, but that's
-not the main focus here. After some time, a "troll" joined the thread (She didn't want me to use her name.
-She was probably not serious, but that's how I'll refer to her from now on) The first question
-of CCC 2022 quickly grab her attention, because she had already solved a variant of it before.
+next CCC was the next day. So a thread made to help him. After some time, a "troll" joined
+the thread (She didn't want me to use her name. She was probably not serious, but that's how
+I'll refer to her from now on) The first question of CCC 2022 quickly grab her attention,
+because she had already solved a variant of it before.
 
 Here's the question itself;
 > Finn loves Fours and Fives. In fact, he loves them so much that he wants to know the number
@@ -129,7 +129,7 @@ int silly2(int n)
 Before we get into the next section, I want to explain how exactly it finds the number of fours. First, it divides `n`
 by 4 and sets it equal to `n4`. But this is not enough, because not every number is not divisible by 4 (duh). So it also calculates `n % 4`, and
 sets it equal to `d` (I avoided using modulus operator and went with `n-n4*4` there because it is faster, yes I am obsessed
-with tiny and probably ineffective speed improvements). Since this value can take values 0, 1, 2 and 3; I manually counted how many fours I had to remove
+with tiny and probably negligible speed improvements). Since this value can take values 0, 1, 2 and 3; I manually counted how many fours I had to remove
 in order for the difference to be divisible by 5:
 + For `d=0`, I don't have to remove any fours since it is already divisible by 5.
 + For `d=1`, I have to remove 1 four,
@@ -147,14 +147,14 @@ will be represented with \\(\(a, b\)\\). Similarly, the least common multiple of
 divide \\(b\\).
 
 With that out of the way, we can begin. Let's add an entirely different person into the question: Jane. Jane is an unusual girl, her favorite two numbers always
-change. Let's call them \\(p \text{ and } q\\). Jane is also not great at math, she wants us to find the number of ways to form any given number as a sum of her
+change. Let's call them \\(p \text{ and } q\\). Jane is also not great at math, she wants us to determine the number of ways to form any given number as a sum of her
 favorite numbers \\(p \text{ and } q\\).
 
-Now let's prove to her if \\g = ((p, q)\\), then we can only form numbers that are divisible by \\(g\\), and also show that if a number \\(r\\) is divisible by \\(g\\). The
+Now let's prove to her if \\(g = (p, q)\\), then we can only form numbers that are divisible by \\(g\\), and also show that if a number \\(r\\) is divisible by \\(g\\). The
 question of forming it using \\(p\\) and \\(q\\) is equivalent to forming \\(\frac{r}{g}\\) with \\(\frac{p}{g}\\) and \\(\frac{q}{g}\\). First claim is trivially easy to prove,
 let a formulation \\(r\\) to be \\(px + qy\\) where \\(x \text{ and } y\\) are integers, since \\(g \mid p\\) and \\(g \mid q\\), the formulation itself is also divisible by \\(g\\).
 And if we let \\(p = g\alpha\\) and \\(q = g\beta\\) where \\(\(\alpha, \beta\)=1\\). This gives us \\(r = px + qy = g(\alpha x + \beta y)\\) and \\(\frac{r}{g}=\alpha x + \beta y
-= \frac{p}{g}x+\frac{q}{g}y\\). And proves our second claim.
+= \frac{p}{g}x+\frac{q}{g}y\\). This proves our second claim.
 
 We can calculate the GCD of two numbers using the [Euclidean Algorithm](https://en.wikipedia.org/wiki/Euclidean_algorithm), but whilst calculating the GCD, I also want to calculate
 the \\(x \text{ and } y\\) that forms \\(g\\), as they will come in handy in the future. I won't delve into how algorithm works and why it works here, because it'd occupy a lot of space.
@@ -180,6 +180,8 @@ constexpr EuclideanAlgorithmResult euclidean(int p, int q)
     int max_copy = max;
     int min = p + q - max;
 
+    if(min == 0) return {max, 0, 0};
+
     int f_0 = 1, f_1 = 0, f_2 = max;
     int s_0 = 0, s_1 = 1, s_2 = min;
 
@@ -203,7 +205,7 @@ constexpr EuclideanAlgorithmResult euclidean(int p, int q)
 }
 ```
 
-Now, let's focus on the actual question, let the Jane's smallest favorite number to be \\(p\\), other one to be \\(q\\) and our target number to be \\(r\\).
+Now, let's focus on the actual question, let the Jane's smallest favorite number to be \\(p\\), the other one to be \\(q\\) and our target number to be \\(r\\).
 By intuition, we can see that we can replace \\(\frac{\[p, q\]}{p}\\) amount of \\(p\\)'s with \\(\frac{\[p, q\]}{q}\\) amount of \\(q\\)'s. We've shown earlier
 that solving this problem for \\(p, q, r\\), where \\(\(p, q\) \neq 1\\) is equivalent to solving it for \\(\frac{p}{\(p, q\)}, \frac{q}{\(p, q\)}, \frac{r}{\(p, q\)}\\).
 So we can safely assume that \\(\(p, q\)=1\\). This also makes our past claim a bit clearer since \\(\[p, q\] = pq\\) if \\(\(p, q\)=1\\). Let me rephrase it to make things clear,
@@ -237,13 +239,16 @@ constexpr int jane(int n, int p, int q)
 ```
 
 Oops, we immediately came across another problem. What should we subtract from `np`? If you recall, for the \\(p=4\\) and \\(q=5\\) case that number turned out to be
-equal to `d` itself. But we are not that lucky here so let's think about it more. Let's say that removing \\(t\\) amount of \\(p\\)'s gets us a number that is divisible
+equal to `d` itself. But we are not that lucky here so let's think about it more.
+
+Let's say that removing \\(t\\) amount of \\(p\\)'s gets us a number that is divisible
 by \\(q\\). So the congruence \\(pt+d \equiv 0 \pmod{q}\\) has to be satisfied. If we subtract \\(d\\) from both sides, we get this congruence: \\(pt \equiv -d \pmod{q}\\).
 Now I want you to imagine a number \\(\bar{p}\\) such that \\(p\bar{p} \equiv 1 \pmod{q}\\). If we multiply both sides of the congruence by \\(\bar{p}\\) we can find \\(t\\)
 in terms of \\(d\\) and \\(\bar{p}\\): \\(t \equiv -d\bar{p} \pmod{q}\\). But what is the value of \\(\bar{p}\\)? And most importantly, does such a number exist? Let's investigate.
+
 \\(p\bar{p} \equiv 1 \pmod{q}\\) implies that there exist an integer \\(z\\) such that, \\(p\bar{p} + qz = 1\\). But wait, since 1 is the GCD of \\(p\\) and \\(q\\), the Euclidean
-algorithm has already given us the value of \\(\bar{p}\\) and \\(z\\) as \\(x\\) and \\(y\\), respectively. So we found the value of \\(t\\) as \\(t=-dx \mod{q}\\). To avoid C++'s
-negative modulus results, I'll also add the product \\(pq\\) before performing the modulus operation. Since it contains \\(q\\) as a product, it won't change the result.
+algorithm has already given us the value of \\(\bar{p}\\) and \\(z\\) as \\(x\\) and \\(y\\), respectively. Consequently, we found the value of \\(t\\) as \\(t=-dx \mod{q}\\). To avoid C++'s
+negative modulus results, I'll also add the product \\(pq\\) before performing the modulus operation. As it contains \\(q\\) as a factor, it won't change the result.
 
 ```cpp
 constexpr int jane(int n, int p, int q)
@@ -273,4 +278,38 @@ constexpr int jane(int n, int p, int q)
 ```
 
 ### Second Generalization: Multiple Favorite Numbers
-TBC
+This is where I just propose a boring solution and finish this post... Seriously, I've tried many methods, but I couldn't come up with a solution that will lower the time complexity below
+\\(O\(n^{k}\log n\)\\) for \\(k+2\\) favorite numbers. Given that this was supposed to be a fun little problem it costed me a lot of time. I'll just give you a C++ code that will do the work
+and leave this problem behind. Anyways, the strategy is for a given set of favorite numbers is simple, and it probably came to mind for some of you. Given \\(k\\) favorite numbers and a target
+number \\(n\\), we'll pick one favorite number and recursively check for target numbers \\(n, n-k, n-2k, \dots\\) with the remaining \\(k-1\\) favorite numbers. 
+
+```cpp
+constexpr int multiple(int n, int f1)
+{
+    return (f1>0)*(n%f1==0)*(n/f1);
+}
+
+constexpr int multiple(int n, int f1, int f2)
+{
+    return jane(n, f1, f2);
+}
+
+template<typename T>
+concept Int=std::is_same_v<T, int>;
+
+template<Int... Nums>
+constexpr int multiple(int n, int f1, Nums... nums)
+{
+    if(n == 0) return 1;
+
+    int total = 0;
+    for(int i=n; i >= 0; i-=f1)
+    {
+        total += multiple(i, nums...);
+    }
+    return total;
+}
+```
+
+Here's the code itself. If this problem has interested you, feel free to work on it and share your own results with everybody. Who knows, maybe there are more efficient ways to solve this problem.
+But that's it for me, see you in the future!
