@@ -279,9 +279,10 @@ constexpr int jane(int n, int p, int q)
 
 ### Second Generalization: Multiple Favorite Numbers
 This is where I just propose a boring solution and finish this post... Seriously, I've tried many methods, but I couldn't come up with a solution that will lower the time complexity below
-\\(O\(n^{k}\log n\)\\) for \\(k+2\\) favorite numbers. Given that this was supposed to be a fun little problem it costed me a lot of time. I'll just give you a C++ code that will do the work
-and leave this problem behind. Anyways, the strategy is for a given set of favorite numbers is simple, and it probably came to mind for some of you. Given \\(k\\) favorite numbers and a target
-number \\(n\\), we'll pick one favorite number and recursively check for target numbers \\(n, n-k, n-2k, \dots\\) with the remaining \\(k-1\\) favorite numbers. 
+\\(O\(n^{k}\log\(\min\(f_{k+1}, f_{k+2}\)\)\)\\) for \\(k+2\\) favorite numbers, \\(f_{k+1} and f_{k+2}\\) being \\(k+1\\)st and \\(k+2\\)nd favorite numbers, respectively. Given that this
+was supposed to be a fun little problem it costed me a lot of time. I'll just give you a C++ code that will do the work and leave this problem behind. Anyways, the strategy is for a given
+set of favorite numbers is simple, and it probably came to mind for some of you. Given \\(k\\) favorite numbers and a target number \\(n\\), we'll pick one favorite number and recursively
+check for target numbers \\(n, n-k, n-2k, \dots\\) with the remaining \\(k-1\\) favorite numbers. 
 
 ```cpp
 constexpr int multiple(int n, int f1)
