@@ -314,3 +314,20 @@ constexpr int multiple(int n, int f1, Nums... nums)
 
 Here's the code itself. If this problem has interested you, feel free to work on it and share your own results with everybody. Who knows, maybe there are more efficient ways to solve this problem.
 But that's it for me, see you in the future!
+
+**Update**: After posting this post, the problem caught attention of a user named Proloy. And he posted a simple solution which I completely overlooked.
+```py
+def count_parts(favs, n):
+    curr = [1] + [0]*n
+
+    for fav in favs:
+        for i in range(fav, n+1):
+            curr[i]+=curr[i-fav]
+
+    return curr[-1]
+```
+
+Which is another case of utilizing the dynamic programming technique. It has a time complexity of \\(O(nk)\\) for \\(k\\) favorite numbers. At the end of the day dynamic programming won, but it was
+still a fun problem to work on, who knows, maybe there is a clever solution that lowers the time complexity even more.
+
+

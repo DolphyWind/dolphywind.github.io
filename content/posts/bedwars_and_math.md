@@ -36,7 +36,7 @@ So we have this recurrence relation
 $$B_{n+1}=B_{n}+b_{n+1}$$
 where \\(b_{n}\\) denotes the amount of blocks needed at the bottom on the \\(n^{th}\\) layer. Similarly, by observation we can deduce a relation between \\(b_{n+1}\\) and \\(b_{n}\\).
 They have a similar relation, but this time it does not depend on anything else.
-$$b_{n+1}=b_{n}+4; \hspace{1 cm} b_{1}=6$$
+$$b_{n+1}=b_{n}+4; \hspace{0.4 cm} b_{1}=6$$
 Here's a GIF if you want to see that relation yourself.
 ![Bottom](/content/bedwars_2.gif)
 
@@ -64,17 +64,17 @@ $$B_{k}=8+\sum_{i=2}^{k}(4i+2)=8+4\sum_{i=2}^{k}i + \sum_{i=2}^{k}2=8+4(\frac{k(
 $$B_{k}=2k^{2}+4k+2=2(k+1)^{2}$$
 
 So we found the formula we wanted. Though, I'll use the notation \\(Bw(x)\\) instead of \\(B_{x}\\), simply because I like it more. We can stop there, but I'll continue just a bit more
-to derive a couple of more equations. If you recall what I was aiming for, I needed a formula that counts how many total blocks I need to build \\(x\\) layers. Let's call it \\(Bws(x)\\)
-and find a formula for it as well.
+to derive a couple of more equations. If you recall what I was aiming for, I originaly needed a formula that counts how many total blocks I need to build \\(x\\) layers. Let's call it
+\\(Bws(x)\\) and find a formula for it as well.
 
 $$Bws(x)=\sum_{i=1}^{x}Bw(i)=\sum_{i=1}^{x}2(i+1)^{2}=2\sum_{i=2}^{x+1}i^{2}=2(\frac{(x+1)(x+2)(2x+3)}{6} - 1)=\frac{2x^{3}+9x^{2}+13x}{3}$$
 
 And also you can define an inverse of \\(Bw(x)\\) for \\(x \geq 0\\) and denote it as \\(Bwi(x)\\);
 $$Bwi(x)=\sqrt{\frac{x}{2}}-1$$
 
-And lastly, you can apply the same process to a very similar minigame, Eggwars. I won't derive them by hand, I'll leave it as an exercise to you. But below, you can find the formulas
+And lastly, you can apply the same process to a very similar minigame, Eggwars. I won't derive them here, I'll leave it as an exercise to you. But below, you can find the formulas
 for the layer function, its inverse and the sum function, respectively.
 
 $$ Ew(x) = x^{2}+(x+1)^{2} $$
-$$ Ewi(x) = \frac{\sqrt{2x-1} - 1}{2} $$
+$$ Ewi(x) = \frac{\sqrt{2x-1} - 1}{2},\hspace{0.3cm} x\geq0$$
 $$ Ews(x) = \frac{2x^{3}+6x^{2}+7x}{3}$$
