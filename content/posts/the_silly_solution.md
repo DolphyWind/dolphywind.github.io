@@ -9,7 +9,7 @@ tags:
   - programming
   - number_theory
 author: "DolphyWind"
-cover: "/silly.png"
+cover: "/content/silly.png"
 ---
 
 A couple of nights ago, in the Esolangs Discord server, a user named kepe was
