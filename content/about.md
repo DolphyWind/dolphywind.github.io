@@ -59,7 +59,7 @@ The languages, tools and frameworks I am using or have used in the past
 + C/C++: CLion, NeoVim
 + Python: PyCharm, NeoVim
 + Markdown: Obsidian.md, VSCodium, NeoVim
-+ LaTeX: Obsidian.md
++ LaTeX: Obsidian.md, NeoVim
 + C#: Rider
 + Java: Intellij IDEA, NeoVim
 + Anything else: NeoVim
@@ -107,7 +107,7 @@ I am using a dual-boot system. I daily drive Linux and only boot Windows for gam
 + [Reddit](https://www.reddit.com/user/YunusEmre0037)
 
 ### Buttons
-{{< gallery
+{{< buttons
   "/no-web3.gif"
   "/latex.gif"
   "/github-check.gif"

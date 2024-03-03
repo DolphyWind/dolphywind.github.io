@@ -180,7 +180,7 @@ constexpr EuclideanAlgorithmResult euclidean(int p, int q)
     int max_copy = max;
     int min = p + q - max;
 
-    if(min == 0) return {max, 0, 0};
+    if(min == 0) return {max, (max==p), (max==q)};
 
     int f_0 = 1, f_1 = 0, f_2 = max;
     int s_0 = 0, s_1 = 1, s_2 = min;
@@ -281,8 +281,8 @@ constexpr int jane(int n, int p, int q)
 This is where I just propose a boring solution and finish this post... Seriously, I've tried many methods, but I couldn't come up with a solution that will lower the time complexity below
 \\(O\(n^{k}\log\(\min\(f_{k+1}, f_{k+2}\)\)\)\\) for \\(k+2\\) favorite numbers, \\(f_{k+1} and f_{k+2}\\) being \\(k+1\\)st and \\(k+2\\)nd favorite numbers, respectively. Given that this
 was supposed to be a fun little problem it costed me a lot of time. I'll just give you a C++ code that will do the work and leave this problem behind. Anyways, the strategy is for a given
-set of favorite numbers is simple, and it probably came to mind for some of you. Given \\(k\\) favorite numbers and a target number \\(n\\), we'll pick one favorite number and recursively
-check for target numbers \\(n, n-k, n-2k, \dots\\) with the remaining \\(k-1\\) favorite numbers. 
+set of favorite numbers is simple, and it probably came to mind for some of you. Given \\(k\\) favorite numbers and a target number \\(n\\), we'll pick one favorite number \\(f\\) and recursively
+check for target numbers \\(n, n-f, n-2f, \dots\\) with the remaining \\(k-1\\) favorite numbers. 
 
 ```cpp
 constexpr int multiple(int n, int f1)

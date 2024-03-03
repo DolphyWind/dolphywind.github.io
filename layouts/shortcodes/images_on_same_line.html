@@ -1,0 +1,11 @@
+{{ $numParams := len .Params }}
+{{ $halfNumOfParams := div $numParams 2 }}
+{{ $percentage := div 100 $halfNumOfParams }}
+{{ $percentage := add $percentage -2 }}
+{{ range $imgIndex := (seq 0 (add $halfNumOfParams -1)) }}
+    {{ $imgIndexDoubled := (mul $imgIndex 2) }}
+    {{ $imgName := (index $.Params $imgIndexDoubled) }}
+    {{ $titleText := (index $.Params (add $imgIndexDoubled 1)) }}
+    <img src="{{ $imgName }}" style="display:inline-block; width: {{ $percentage }}%" alt="{{ $titleText }}" title="{{ $titleText }}"></img>
+{{ end }}
+
