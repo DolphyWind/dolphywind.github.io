@@ -84,7 +84,7 @@ int countWays(int n) {
 If it is first time seeing this code, it might not make too much sense to you. It uses something called
 dynamic programming which is a short form of saying "recursion bad loop good". I had an entirely different
 idea, but after seeing dynamic programming solution I thought mine was silly, so I called it "The Silly Solution".
-The idea was pretty simple, my goal was to find the amount of 5's in the question that had the most amount of 5's,
+The idea was pretty simple, my goal was to find the amount of 5's in the solution that had the most amount of 5's,
 let's call that number \\(n\\), since I can replace 4 fives with 5 fours, then there'd be \\(\lfloor \frac{n}{4} \rfloor\\) more solutions.
 It made sense, and here's the deobfuscated code below:
 ```cpp
