@@ -4,7 +4,7 @@ title: 'About Me'
 draft: false
 ---
 
-Hello! My name is Yunus Emre Aydın. I am a Computer Science student in Istanbul University-Cerrahpaşa.
+Hello! My name is Yunus Emre Aydın. I am a Computer Science student at Istanbul University-Cerrahpaşa.
 My interest towards computers started to develop during my childhood years. My programming journey began when
 I got accepted to Besiktas Science and Art Center which is a public school for gifted students. Since then, I've written
 countless lines of code and continue to write more. I am more focused on computer graphics at the moment, but I'd like to

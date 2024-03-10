@@ -60,21 +60,21 @@ $$ B_{1}=8 \hspace{1.4cm} \\\\
    B_{k}=B_{k-1}+b_{k} $$
 
 Upon adding these equations and cancelling the necessary terms, we get;
-$$B_{k}=8+\sum_{i=2}^{k}(4i+2)=8+4\sum_{i=2}^{k}i + \sum_{i=2}^{k}2=8+4(\frac{k(k+1)}{2}-\frac{1\cdot2}{2})+2(k-1)$$
-$$B_{k}=2k^{2}+4k+2=2(k+1)^{2}$$
+$$B_{k}=8+\sum_{i=2}^{k}(4i+2)=8+4\sum_{i=2}^{k}i + \sum_{i=2}^{k}2=8+4\left(\frac{k(k+1)}{2}-1\right)+2(k-1)$$
+$$B_{k}=2k^{2}+4k+2=2\left(k+1\right)^{2}$$
 
 So we found the formula we wanted. Though, I'll use the notation \\(Bw(x)\\) instead of \\(B_{x}\\), simply because I like it more. We can stop there, but I'll continue just a bit more
 to derive a couple of more equations. If you recall what I was aiming for, I originaly needed a formula that counts how many total blocks I need to build \\(x\\) layers. Let's call it
 \\(Bws(x)\\) and find a formula for it as well.
 
-$$Bws(x)=\sum_{i=1}^{x}Bw(i)=\sum_{i=1}^{x}2(i+1)^{2}=2\sum_{i=2}^{x+1}i^{2}=2(\frac{(x+1)(x+2)(2x+3)}{6} - 1)=\frac{2x^{3}+9x^{2}+13x}{3}$$
+$$Bws(x)=\sum_{i=1}^{x}Bw(i)=\sum_{i=1}^{x}2(i+1)^{2}=2\sum_{i=2}^{x+1}i^{2}=2\left(\frac{(x+1)(x+2)(2x+3)}{6} - 1\right)=\frac{2x^{3}+9x^{2}+13x}{3}$$
 
-And also you can define an inverse of \\(Bw(x)\\) for \\(x \geq 0\\) and denote it as \\(Bwi(x)\\);
+You can also define the inverse of \\(Bw(x)\\) for \\(x \geq 0\\) and denote it as \\(Bwi(x)\\);
 $$Bwi(x)=\sqrt{\frac{x}{2}}-1$$
 
 And lastly, you can apply the same process to a very similar minigame, Eggwars. I won't derive them here, I'll leave it as an exercise to you. But below, you can find the formulas
 for the layer function, its inverse and the sum function, respectively.
 
-$$ Ew(x) = x^{2}+(x+1)^{2} $$
+$$ Ew(x) = x^{2}+\left(x+1\right)^{2} $$
 $$ Ewi(x) = \frac{\sqrt{2x-1} - 1}{2},\hspace{0.3cm} x\geq0$$
 $$ Ews(x) = \frac{2x^{3}+6x^{2}+7x}{3}$$

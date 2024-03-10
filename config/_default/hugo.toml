@@ -10,7 +10,7 @@ paginate     = 10
 [languages]
   [languages.en]
     title = "Dolphy's Blog"
-    copyright = '© 2024-2024 by Yunus Emre Aydın'
+    copyright = 'Made by Yunus Emre Aydın, Licensed under GPL-3'
     
     [languages.en.params]
       writtenBy = "Written by"

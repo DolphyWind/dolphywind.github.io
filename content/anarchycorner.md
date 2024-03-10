@@ -7,6 +7,15 @@ draft: false
 
 ---
 
+My responsibilities are keeping me from working on my hobbies, thanks adulthood!
+
+---
+
+I thought vim users were wannabe cool kids. But the more I use vim, more I realize how much reaching for mouse slows me down. The amount of things vim allows you
+to do is crazy. Seriously, it has no limits.
+
+---
+
 Documenting stuff is tiring.
 
 ---
