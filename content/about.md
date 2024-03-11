@@ -99,7 +99,7 @@ I am using a dual-boot system. I daily drive Linux and only boot Windows for gam
 + [mpereira/tty-solitaire](https://github.com/mpereira/tty-solitaire): A solitaire game on terminal [PR](https://github.com/mpereira/tty-solitaire/pull/67) [My modifications](https://github.com/DolphyWind/tty-solitaire)
 
 ### Other Places I am at
-+ Mail: [yunusaydin590@gmail.com](mailto:yunusaydin590@gmail.com)
++ Mail: [dolphywind@gmail.com](mailto:yunusaydin590@gmail.com)
 + [GitHub](https://www.github.com/DolphyWind)
 + [Itch.io](https://dolphywind.itch.io)
 + [Steam](https://steamcommunity.com/id/DolphyWind/)
