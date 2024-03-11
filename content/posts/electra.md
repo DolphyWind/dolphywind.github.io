@@ -1,7 +1,7 @@
 ---
 title: 'Electra: A 2D Language'
 date: 2024-03-06T23:19:47+03:00
-draft: true
+draft: false
 toc: false
 images:
 tags:
