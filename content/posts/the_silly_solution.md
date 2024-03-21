@@ -142,9 +142,7 @@ Wear your seatbelts people, we are going to the number theory realm!
 
 ### First Generalization: Why Not Any Two Favorite Numbers?
 Before we begin, I'd like to explain the notation that I'll be using in the following text. The greatest common denominator of two numbers \\(a \text{ and } b\\),
-will be represented with \\(\(a, b\)\\). Similarly, the least common multiple of two numbers \\(a \text{ and } b\\) will be represented with \\(\[a, b\]\\).
-\\(a \mid b\\) means \\(a\\) divides \\(b\\) meaning there exists an integer \\(x\\) such that \\(b=ax\\). Similarly, \\(a \not \mid b\\) means \\(a\\) does not
-divide \\(b\\).
+will be denoted with \\(\(a, b\)\\). Similarly, the least common multiple of two numbers \\(a \text{ and } b\\) will be denoted with \\(\[a, b\]\\).
 
 With that out of the way, we can begin. Let's add an entirely different person into the question: Jane. Jane is an unusual girl, her favorite two numbers always
 change. Let's call them \\(p \text{ and } q\\). Jane is also not great at math, she wants us to determine the number of ways to form any given number as a sum of her
