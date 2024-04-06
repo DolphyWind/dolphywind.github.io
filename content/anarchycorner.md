@@ -7,6 +7,10 @@ draft: false
 
 ---
 
+I LOVE NEOVIMSGFDHAGBRSHFSJAAF
+
+---
+
 My responsibilities are keeping me from working on my hobbies, thanks adulthood!
 
 ---
