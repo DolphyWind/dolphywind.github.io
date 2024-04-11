@@ -35,7 +35,7 @@ $$ f_{i}(x) = \prod_{\substack{k=1 \\\\ k \neq i}}^{n}(x-x_{k}) $$
 This is not entirely correct though, as we don't know what it outputs for \\(x=x_{i}\\). But we can force it to output \\(1\\) by dividing each
 term by \\((x_{i}-x_{k})\\). This does not affect the outputs on other \\(x\\) values since dividing zero by a non-zero number yields zero, but
 it forces our filter to output \\(1\\) on \\(x_{i}\\). So the final form of our filters is going to look like this;
-$$ f_{i}(x)=\prod_{i=1}^{n}\frac{x-x_{k}}{x_{i}-x_{k}} $$
+$$ f_{i}(x)=\prod_{\substack{k=1 \\\\ i \neq k}}^{n}\frac{x-x_{k}}{x_{i}-x_{k}} $$
 
 If you recall, to get \\(f(x)\\) we have to multiply each one of our filters with the corresponding output value and take their sum.
 $$ f(x)=\sum_{i=1}^{n}f_{i}(x)y_{i} $$
