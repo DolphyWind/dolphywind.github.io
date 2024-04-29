@@ -7,6 +7,10 @@ draft: false
 
 ---
 
+I hate naming things
+
+---
+
 I LOVE NEOVIMSGFDHAGBRSHFSJAAF
 
 ---
