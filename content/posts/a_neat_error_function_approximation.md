@@ -9,11 +9,12 @@ tags:
   - ai
   - math
   - programming
+  - statistics
 author: "DolphyWind"
 ---
 
 In this post, we're going to try to approximate the [error function](https://en.wikipedia.org/wiki/Error_function), which is a very important function in statistics and also a fascinating function overall. I wanted to make
-this post for a long time now because it combines a lot of ideas from different fields of mathematics and computer science, and it even introduces a new idea as well! If you are ready, let's dive in.
+this post for a long time now because it combines ideas from mathematics and computer science, and it even introduces a new idea as well! If you are ready, let's dive in.
 
 If you don't remember, the error function is defined as below.
 $$erf(x) = \frac{2}{\sqrt{\pi}} \int_{0}^{x} e^{-t^{2}} dt $$
