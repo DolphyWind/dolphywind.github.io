@@ -14,6 +14,7 @@ delve into other areas in the future as well.
 Here are my interests. (Ordering is completely random)
 
 * **Computer Science**
+  + Artificial Intelligence
   + Game Development
   + Computer Graphics
   + Game Engine Development
@@ -45,7 +46,7 @@ Here are my interests. (Ordering is completely random)
 ### Languages, Tools & Frameworks
 The languages, tools and frameworks I am using or have used in the past
 + C++, C, CMake, GDB
-+ Python, OpenCV, Sympy
++ Python, OpenCV, Sympy, NumPy, Pytorch, Tensorflow
 + SFML, GLFW
 + C#, Unity
 + Java
@@ -56,12 +57,12 @@ The languages, tools and frameworks I am using or have used in the past
 + ArduPilot, Gazebo, MAVProxy
 
 ### IDEs & Text Editors
-+ C/C++: CLion, NeoVim
-+ Python: PyCharm, NeoVim
-+ Markdown: Obsidian.md, VSCodium, NeoVim
++ C/C++: NeoVim
++ Python: NeoVim
++ Markdown: Obsidian.md, NeoVim
 + LaTeX: Obsidian.md, NeoVim
-+ C#: Rider
-+ Java: Intellij IDEA, NeoVim
++ C#: NeoVim, Rider
++ Java: NeoVim
 + Anything else: NeoVim
 
 ### Operating System & Desktop Environment
@@ -99,11 +100,11 @@ I am using a dual-boot system. I daily drive Linux and only boot Windows for gam
 + [mpereira/tty-solitaire](https://github.com/mpereira/tty-solitaire): A solitaire game on terminal [PR](https://github.com/mpereira/tty-solitaire/pull/67) [My modifications](https://github.com/DolphyWind/tty-solitaire)
 
 ### Other Places I am at
-+ Mail: [yunusaydin590@gmail.com](mailto:yunusaydin590@gmail.com)
++ {{< linkalert alert="yunusaydin590 + @gmail.com" >}} Mail {{< /linkalert >}}
 + [GitHub](https://www.github.com/DolphyWind)
 + [Itch.io](https://dolphywind.itch.io)
 + [Steam](https://steamcommunity.com/id/DolphyWind/)
-+ Discord: dolphywind
++ {{< linkalert alert="dolphy + wind" >}} Discord {{< /linkalert >}}
 + [Reddit](https://www.reddit.com/user/YunusEmre0037)
 
 ### Buttons
