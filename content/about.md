@@ -68,7 +68,7 @@ The languages, tools and frameworks I am using or have used in the past
 ### Operating System & Desktop Environment
 I am using a dual-boot system. I daily drive Linux and only boot Windows for gaming and game development.
 
-+ Arch Linux, linux 6.1.71-1-lts with KDE Plasma 5.27.10
++ Arch Linux, linux 6.1.71-1-lts with KDE Plasma 6
 + Windows 11 Home edition
 
 ### Projects
