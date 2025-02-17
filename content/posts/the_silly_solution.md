@@ -127,7 +127,7 @@ int silly2(int n)
 ```
 
 Before we get into the next section, I want to explain how exactly it finds the number of fours. First, it divides `n`
-by 4 and sets it equal to `n4`. But this is not enough, because not every number is not divisible by 4 (duh). So it also calculates `n % 4`, and
+by 4 and sets it equal to `n4`. But this is not enough, because not every number is divisible by 4 (duh). So it also calculates `n % 4`, and
 sets it equal to `d` (I avoided using modulus operator and went with `n-n4*4` there because it is faster, yes I am obsessed
 with tiny and probably negligible speed improvements). Since this value can take values 0, 1, 2 and 3; I manually counted how many fours I had to remove
 in order for the difference to be divisible by 5:
