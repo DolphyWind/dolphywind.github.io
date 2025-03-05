@@ -15,9 +15,9 @@ cover: "/content/silly.png"
 A couple of nights ago, in the Esolangs Discord server, a user named kepe was
 trying to solve last years' Canadian Computing Competition (CCC for short) problems.
 He couldn't solve some of them, and most importantly he didn't know graphs well and the
-next CCC was the next day. So a thread made to help him. After some time, a "troll" joined
+next CCC was the next day. So a thread has been made made to help him. After some time, a "troll" joined
 the thread (She didn't want me to use her name. She was probably not serious, but that's how
-I'll refer to her from now on) The first question of CCC 2022 quickly grab her attention,
+I'll refer to her from now on). The first question of CCC 2022 quickly grab her attention,
 because she had already solved a variant of it before.
 
 Here's the question itself;
