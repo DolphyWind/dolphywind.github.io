@@ -9,7 +9,7 @@ draft: false
 
 I regret installing github copilot now. LMAO it auto-completes this sentence as "It's too good, I'm not sure if I am learning anything". It is the opposite of good, the first
 command I enter after opening nvim is usually "Copilot disable". Disappointing, it still tries to complete next sentences as "It's too good", poor thing I wish it had a conscience
-and could see how stupid it is.
+and could see how stupid it is.  
 <sub><sup>07/03/2025</sup></sub>
 
 ---
