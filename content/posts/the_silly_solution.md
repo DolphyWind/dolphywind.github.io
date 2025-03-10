@@ -154,7 +154,7 @@ let a formulation \\(r\\) to be \\(px + qy\\) where \\(x \text{ and } y\\) are i
 And if we let \\(p = g\alpha\\) and \\(q = g\beta\\) where \\(\(\alpha, \beta\)=1\\). This gives us \\(r = px + qy = g(\alpha x + \beta y)\\) and \\(\frac{r}{g}=\alpha x + \beta y
 = \frac{p}{g}x+\frac{q}{g}y\\). This proves our second claim.
 
-We can calculate the GCD of two numbers using the [Euclidean Algorithm](https://en.wikipedia.org/wiki/Euclidean_algorithm), but whilst calculating the GCD, I also want to calculate
+We can calculate the GCD of two numbers using the [Extended Euclidean Algorithm](https://en.wikipedia.org/wiki/Extended_Euclidean_algorithm), but whilst calculating the GCD, I also want to calculate
 the \\(x \text{ and } y\\) that forms \\(g\\), as they will come in handy in the future. I won't delve into how algorithm works and why it works here, because it'd occupy a lot of space.
 Instead, I'll leave it as an exercise to you, the reader. Here's a C++ code that performs the Euclidean Algorithm:
 ```cpp
