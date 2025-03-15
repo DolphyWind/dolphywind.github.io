@@ -266,7 +266,7 @@ $$\begin{align}
 &(2) &\hspace{0.5 cm}  &i^3=ij=ji=-1   \hspace{1 cm} &j^3=1   \hspace{1 cm} &i^2=j    \hspace{1 cm} &j^2=-i   \hspace{1 cm} &\text{(Triplex numbers of the } 3^{\text{rd}} \text{ kind)} \\\\
 \end{align}$$
 
-Notice that replacing $j$ with $-j$ on $(1)$ gives us the equatons below. Hence the mapping $a+bi_{1}+cj_{1} \mapsto a+bi_{3}-cj_{3}$ is an isomorphism.
+Notice that replacing $j$ with $-j$ on $(1)$ gives us the equatons on $(2)$. Hence the mapping $a+bi_{1}+cj_{1} \mapsto a+bi_{3}-cj_{3}$ is an isomorphism.
 
 Finally, notice that, since composition of two isomorphisms is itself an isomorphism, with this theorem, we prove that all four kinds of triplex numbers we have talked about in this blogpost are isomorphic to one another. 
 
