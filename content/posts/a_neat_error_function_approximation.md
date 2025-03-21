@@ -282,7 +282,7 @@ The first term on right-hand side is computable, we used the mean squared error 
 $$L(\hat{y})=MSE(\hat{y})=\frac{1}{N}\sum_{i=1}^{N}\left(y_{i} - \hat{y_{i}}\right)^{2} $$
 
 So that means
-$$\frac{\partial{L}}{\partial{\hat{y_{i}}}} = \frac{-2}{N}(y_{i}-\hat{y_{i}}) $$
+$$\frac{\partial{L}}{\partial{\hat{y_{i}}}} = \frac{-2}{N} \sum_{i=1}^{N} \left(y_{i}-\hat{y_{i}}\right) $$
 
 PS: If the subscript \\(i\\) confuses you, please remember that \\(\hat{y}\\) is not a single prediction but a vector of predictions since when training a model we use fixed batches of data. So the \\(\hat{y_{i}}\\)
 there represents the current prediction.
@@ -428,5 +428,5 @@ print(f"At x={x_error}")
 ```
 ![Max absolute error](/content/max_abs_error.png)
 
-So the absolute error is about \\(5\cdot10^{-5}\\) which is pretty nice, it beats an approximation that is on the [Wikipedia page](https://en.wikipedia.org/wiki/Error_function#Numerical_approximations) for the error function
+So the absolute error is about \\(5\cdot10^{-5}\\) which is pretty nice, it beats an approximation that is on the [Wikipedia page](https://en.wikipedia.org/wiki/Error_function#Bounds_and_Numerical_approximations) for the error function
 and comes really close to another one. I've had a lot of fun working on this and writing this blog post. [Here's](https://www.desmos.com/calculator/qyppxo0okg) a desmos link if you want to play with the formula yourself.

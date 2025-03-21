@@ -7,7 +7,7 @@ draft: false
 
 ---
 
-Being burnt out absolutely SUCKS.
+Being burnt out absolutely SUCKS.  
 <sub><sup>15/03/2025</sup></sub>
 
 ---
