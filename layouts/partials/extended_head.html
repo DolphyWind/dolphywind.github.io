@@ -10,6 +10,17 @@ MathJax.Hub.Config({
   skipStartupTypeset: false
 });
 </script>
-<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+<script type="text/javascript" src="https://unpkg.com/konami@1.6.3/konami.js"></script>
+<script type="text/javascript">
+  var egg = new Konami(() => {
+    var div = document.getElementsByClassName("xenia_div");
+    if(div.length === 0) return;
+    div = div[0];
+
+    div.innerHTML = '<img src="/content/xenia.jpeg"></img>';
+  });
+  egg.pattern = "818768";
 </script>
 
