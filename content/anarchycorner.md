@@ -7,12 +7,17 @@ draft: false
 
 ---
 
+I love my friends on Erasmus, sad thing is we are going to separate unavoidably, and I know I'll miss them a lot.
+<sub><sup>12/05/2025</sup></sub>
+
+---
+
 Being burnt out absolutely SUCKS.  
 <sub><sup>15/03/2025</sup></sub>
 
 ---
 
-I regret installing github copilot now. LMAO it auto-completes this sentence as "It's too good, I'm not sure if I am learning anything". It is the opposite of good, the first
+I regret installing GitHub copilot now. LMAO it auto-completes this sentence as "It's too good, I'm not sure if I am learning anything". It is the opposite of good, the first
 command I enter after opening nvim is usually "Copilot disable". Disappointing, it still tries to complete next sentences as "It's too good", poor thing I wish it had a conscience
 and could see how stupid it is.  
 <sub><sup>07/03/2025</sup></sub>
