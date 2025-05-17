@@ -32,7 +32,7 @@ Here's the graph of this function. Unfortunately, I couldn't get Geogebra to ren
 
 If you pay attention to the region we are integrating over, it is a square with the side length of \\(2t\\). And since it is a square, we can't utilize the polar coordinates to find a precise formula for the area.
 But what we can do is, we can draw two circular regions, one that is inscribed by our square region and one that inscribes our square region to set bounds for our integral. Their radius are \\(t\\) and \\(t\sqrt{2}\\)
-respectively. (Keep in mind that the below inequality holds for \\(t \geq 0\\), but this is not a big issue because the \\(erf(t)\\) is and odd function.
+respectively. (Keep in mind that the below inequality holds for \\(t \geq 0\\), but this is not a big issue because the \\(erf(t)\\) is an odd function.
 Meaning for \\(t \lt 0\\), we can just use \\(-erf(-t)\\))
 
 $$\int_{-t}^{t}\int_{-\sqrt{t^{2}-x^{2}}}^{\sqrt{t^{2}-x^{2}}}e^{-(x^{2}+y^{2})}dydx \leq I^{2}(t) \leq  \int_{-t\sqrt{2}}^{t\sqrt{2}}\int_{-\sqrt{2t^{2}-x^{2}}}^{\sqrt{2t^{2}-x^{2}}}e^{-(x^{2}+y^{2})}dydx$$
