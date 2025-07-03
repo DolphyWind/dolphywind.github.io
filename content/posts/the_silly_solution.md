@@ -313,7 +313,7 @@ constexpr int multiple(int n, int f1, Nums... nums)
 Here's the code itself. If this problem has interested you, feel free to work on it and share your own results with everybody. Who knows, maybe there are more efficient ways to solve this problem.
 But that's it for me, see you in the future!
 
-**Update**: After posting this post, the problem caught attention of a user named Proloy. And he posted a simple solution which I completely overlooked.
+**Update**: After posting this post, the problem caught attention of a user named Moja. And he posted a simple solution which I completely overlooked.
 ```py
 def count_parts(favs, n):
     curr = [1] + [0]*n
