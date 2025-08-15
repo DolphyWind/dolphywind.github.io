@@ -1,6 +1,6 @@
 ---
 title: 'Taking A Joke To An Extreme'
-date: 2025-05-12T09:28:45+03:00
+date: 2025-08-14T20:28:45+03:00
 draft: false
 toc: false
 images:
