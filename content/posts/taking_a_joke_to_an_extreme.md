@@ -268,9 +268,9 @@ Then transpiled it to olus2000 and shaped it up and ended up with this:
                       "" olus2oOo OLUS2OOO "" ""                            olus2000 olus2000 olus2000 olus2000 olus2000                     olus2000 olus2000 olus2000                            olus2000 olus2000 olus2000 olus2000 olus2000                     olus2000 olus2000 olus2000 olus2000 olus2000 olus2000 " "           olus2000 olus2000 Olus2000! olus2000 Olus2000!           olus2000 Olus2000! Olus2000! olus2000 olus2000           olus2000 Olus2000! Olus2000! olus2000  olus2000!
 ```
 
-The name of the file is, of course, `olus2000.olus2000`. Actual code occupys the first few lines, the rest is comment. You can view the specification of [olus2000](https://esolangs.org/wiki/Olus2000) and [Torth](https://esolangs.org/wiki/Torth)
+The name of the file is, of course, `olus2000.olus2000`. Actual code occupys the first few lines, the rest is a one giant comment. You can view the specification of [olus2000](https://esolangs.org/wiki/Olus2000) and [Torth](https://esolangs.org/wiki/Torth)
 by clicking the respective links. And for the implementation of Torth, click [here](https://github.com/DolphyWind/esoteric/tree/master/torth).
 
 I tried to make it look like someone is impersonating me by creating a new [esolangs.org](https://esolangs.org/) account and naming it "Dolphy" (my main account is named "DolphyWind"). It didn't work at all, even though I guessed
-six people correctly that round, four other people have guessed me and I ended the round with the total of $2$ points.
+six people correctly that round, four other people have guessed me and I ended the round with a total of $2$ points.
 
