@@ -12,7 +12,7 @@ theme = 'hello_friend'
 [languages]
   [languages.en]
     title = "Dolphy's Blog"
-    copyright = 'Made by Yunus Emre Aydın, Licensed under GPL-3'
+    copyright = 'Made by Yunus Emre Aydın, Licensed under CC0-1.0'
     
     [languages.en.params]
       writtenBy = "Written by"
