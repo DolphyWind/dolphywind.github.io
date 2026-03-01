@@ -7,7 +7,7 @@ draft: false
 
 ---
 
-I'm the \#1 cover letter hater.
+I'm the \#1 cover letter hater.  
 <sub><sup>01/03/2026</sup></sub>
 
 ---
