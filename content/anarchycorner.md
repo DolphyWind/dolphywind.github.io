@@ -7,6 +7,11 @@ draft: false
 
 ---
 
+I'm the \#1 cover letter hater.
+<sub><sup>01/03/2026</sup></sub>
+
+---
+
 I spent 7 hours fumbling around with my home server. Oh god I cannot explain how much I missed focusing on something for hours. Plus it made me learn a lot of things about docker and
 webservers in general. All in all, productive day!  
 <sub><sup>25/08/2025</sup></sub>
