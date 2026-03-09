@@ -161,7 +161,7 @@ $$\begin{aligned}
 &b^{2} + ac = 0 \hspace{0.5cm} \to \hspace{0.5cm} b^{2} = -ac
 \end{aligned}$$
 
-Given that $x$ is non-zero, this means neither $a$, $b$ nor $c$ is zero, so we can freely divide those equations to each other to get
+Given that $x$ is non-zero, this means at least $a$, $b$ or $c$ is non-zero, from the equations above, any choice we make imply the other two are non-zero as well, so we can freely divide those equations to each other to get
 $$ \frac{a^{2}}{c^{2}} = \frac{bc}{-ab} \hspace{0.5cm} \to \hspace{0.5cm} a^{3}=-c^{3} $$
 $$ \frac{a^{2}}{b^{2}} = \frac{bc}{-ac} \hspace{0.5cm} \to \hspace{0.5cm} a^{3}=-b^{3} $$
 
@@ -205,7 +205,7 @@ Before attempting to prove the statement above, we first have to understand the 
 $p(x)$ is a polynomial with coefficients from $\mathbb{R}$, we can rewrite $p(x)$ as $(x^3 + 1)q(x)+r(x)$ where $deg[r(x)] \leq 2$ by using simple polynomial division. And since the term $q(x)(x^3+1) \in \langle x^{3} + 1 \rangle$,
 it is absorbed and $p(x) + \langle x^{3} + 1 \rangle = r(x) + \langle x^{3} + 1 \rangle$, meaning that any element of $R[X]/\langle x^{3} + 1 \rangle$ has the shape $(a+bx+cx^{2}) + \langle x^{3} + 1 \rangle$.
 
-To find what higher degree elements e.g. $x^{4} + \langle x^{3} + 1 \rangle$ equal to, we can use a neat trick. Since $x^{3} + 1 \in \langle x^{3} + 1\rangle$, we know that $x^3+1 + \langle x^3+1\rangle$ is equalt to the set
+To find what higher degree elements e.g. $x^{4} + \langle x^{3} + 1 \rangle$ equal to, we can use a neat trick. Since $x^{3} + 1 \in \langle x^{3} + 1\rangle$, we know that $x^3+1 + \langle x^3+1\rangle$ is equal to the set
 $0 + \langle x^{3} + 1\rangle$. Therefore, we can treat $x^{3} + 1$ as if it were equal to $0$ and replace $x^{3}$ with $-1$.
 
 To prove the theorem, I'll give two proofs, one will be given by directly defining the isomorphism and showing it preserves the algebraic structure, and the other will be proven using something called the 
@@ -221,7 +221,7 @@ $$\begin{align}\phi(xy) = \phi\left\[ (a+bi+cj)(d+ei+fj) \right\] &= \phi\left\[
 QED.
 
 **Proof 3.2:** Let's define a homomorphism $\phi: \mathbb{R}[X] \to \mathbb{T}$ by the mapping $p(x) \mapsto p(i)$ and find kernel of this homomorphism, which is the ring of elements that map to $0$ in $\mathbb{T}$.
-Since $i^{3} = -1$, the kernel is the set of all polynomials with $(x^{3} + 1)$ as a factor, which is the set $\langle x^{3} + 1 \rangle$. By the first isomorphism theorem, we how that there exist an isomorphism $\varphi$
+Since $i^{3} = -1$, the kernel is the set of all polynomials with $(x^{3} + 1)$ as a factor, which is the set $\langle x^{3} + 1 \rangle$. By the first isomorphism theorem, we know that there exist an isomorphism $\varphi$
 from $R[X]/\langle x^{3} + 1 \rangle $ to $ \mathbb{T}$. Since $\varphi^{-1}$ itself is an isomorphism, $\mathbb{T} \approx R[X]/\langle x^{3} + 1 \rangle$. QED.
 
 #### Theorem 4: Isomorphism 2
