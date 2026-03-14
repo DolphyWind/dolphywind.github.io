@@ -161,7 +161,7 @@ $$\begin{aligned}
 &b^{2} + ac = 0 \hspace{0.5cm} \to \hspace{0.5cm} b^{2} = -ac
 \end{aligned}$$
 
-Given that $x$ is non-zero, this means at least $a$, $b$ or $c$ is non-zero, from the equations above, any choice we make imply the other two are non-zero as well, so we can freely divide those equations to each other to get
+Given that $x$ is non-zero, this means at least one of $a$, $b$ or $c$ is non-zero, from the equations above, any choice we make imply the other two are non-zero as well, so we can freely divide those equations to each other to get
 $$ \frac{a^{2}}{c^{2}} = \frac{bc}{-ab} \hspace{0.5cm} \to \hspace{0.5cm} a^{3}=-c^{3} $$
 $$ \frac{a^{2}}{b^{2}} = \frac{bc}{-ac} \hspace{0.5cm} \to \hspace{0.5cm} a^{3}=-b^{3} $$
 
