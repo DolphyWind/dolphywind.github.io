@@ -1,6 +1,6 @@
 ---
 title: 'Building A Home Lab: My Experience'
-date: 2026-04-03T20:41:32+03:00
+date: 2026-06-03T20:41:32+03:00
 draft: false
 toc: false
 images:
